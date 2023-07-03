@@ -1,0 +1,24 @@
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		src: url($furl) format('woff2')
+
+@include font('Roboto', normal, 400, '../fonts/roboto-regular-webfont.woff2')
+@include font('Roboto', normal, 500, '../fonts/Roboto-Medium.woff2')
+
+// GENERAL CSS SETTINGS
+
+::placeholder
+	color: #ACACAC
+
+body
+	height: 100vh
+
+// RESET BACGROUND ON AUTOCOMPLETE
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active
+	box-shadow: 0 0 0 30px #fff inset !important

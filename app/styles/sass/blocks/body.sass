@@ -1,0 +1,221 @@
+#popmechanic-form
+  .popup-box
+    position: relative
+    display: flex
+    align-items: center
+    flex-direction: column
+    max-width: 550px
+    padding: 48px 40px
+    outline: 3px solid #027A35
+    border-radius: 4px
+
+  .popup-close-box
+    position: absolute
+    right: 26px
+    top: 32px
+    cursor: pointer
+
+  .popup-close-box:hover path
+    stroke: #027A35
+
+  .popup-logo-box
+    width: 100%
+    text-align: center
+    margin-bottom: 32px
+
+  .popup-heading
+    max-width: 400px
+    color: #272727
+    text-align: center
+    font-size: 30px
+    font-family: 'Roboto', sans-serif
+    line-height: 130%
+    text-transform: uppercase
+    margin-bottom: 32px
+
+  .popup-form
+    display: flex
+    flex-direction: column
+    width: 100%
+
+  .popup-form-label
+    color: #272727
+    font-size: 18px
+    font-family: 'Roboto', sans-serif
+    font-weight: 500
+    line-height: 22px
+    margin-bottom: 16px
+
+  .popup-form-input
+    color: #272727
+    font-size: 16px
+    font-family: 'Roboto' sans-serif
+    font-weight: 400
+    line-height: 22px
+    border: none
+    padding: 11px 16px 11px 16px
+    border-radius: 4px
+    outline: 1.5px solid #ACACAC
+    margin-bottom: 24px
+
+  .popup-form-input::placeholder
+    color: #ACACAC
+    font-size: 16px
+    font-family: 'Roboto', sans-serif
+    font-weight: 400
+    line-height: 22px
+
+  .popup-onerror
+    display: none
+
+  .popup-form-button
+    max-width: 274px
+    padding: 18px 68px 18px 68px
+    align-self: center
+    color: #FFF
+    font-size: 24px
+    font-family: 'Roboto', sans-serif
+    font-weight: 500
+    text-transform: uppercase
+    background-color: #027A35
+    border: none
+    border-radius: 4px
+    cursor: pointer
+
+  .popup-form-button:hover
+    background-color: #219653
+
+  input
+    &:focus:valid
+      border-radius: 4px
+      outline: 1.5px solid #219653
+
+.popup
+  width: 100%
+  height: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+  font-family: 'Roboto', sans-serif
+
+// CREATE CUSTOM CHECKBOX AND PERSONAL DATES
+
+.popup-form-checkbox-box
+  display: flex
+  justify-content: start
+  align-items: center
+  color: #272727
+  font-size: 16px
+  font-family: 'Roboto', sans-serif
+  font-weight: normal
+  margin-bottom: 32px
+  a
+    color: #027A35
+
+.custom-checkbox
+  position: absolute
+  z-index: -1
+  opacity: 0
+
+.custom-checkbox+label
+  display: inline-flex
+  align-items: center
+  user-select: none
+
+.custom-checkbox+label::before
+  content: ''
+  display: inline-block
+  width: 21px
+  height: 21px
+  flex-shrink: 0
+  flex-grow: 0
+  border-radius: 4px
+  border: 1.5px solid #007535
+  background-repeat: no-repeat
+  background-position: center center
+  background-size: 60% 60%
+  cursor: pointer
+  margin-right: 12px
+
+.custom-checkbox:checked+label::before
+  border-color: #219653
+  background-image: url('data:image/svg+xml,<svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 6.41667L5.13793 11L13 1" stroke="%23219653" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>')
+  cursor: pointer
+
+.br
+  display: none
+
+//PHONE SCREEN 
+.popmechanic-mobile #popmechanic-form
+  .popup-box
+    max-width: 344px
+    padding: 32px
+
+  .popup-logo-box svg
+    width: 194px
+    height: 26px
+
+  .popup-logo-box
+    margin-bottom: 24px
+
+  .popup-close-box
+    right: 16px
+    top: 16px
+
+  .popup-close-box svg
+    width: 15px
+    height: 15px
+
+  .popup-heading
+    max-width: 240px
+    font-size: 18px
+    margin-bottom: 24px
+
+  .popup-form-label
+    font-size: 16px
+    margin-bottom: 8px
+
+  .star-requiered
+    display: none
+
+  .popup-form-input
+    padding: 11px 16px 11px 16px
+    margin-bottom: 16px
+
+  .popup-form-input[name="inn"]
+    margin-bottom: 24px
+
+  .popup-form-input:placeholder
+    font-size: 14px
+    line-height: 22px
+
+  .popup-form-checkbox-box
+    max-width: 244px
+    align-self: center
+    font-size: 12px
+    margin-bottom: 24px
+
+  .popup-form-button
+    width: 100%
+    font-size: 16px
+    padding: 12px 0
+
+  .br
+    display: block
+
+//INVALIDATION STYLE
+
+  .popup-onerror
+    display: block
+    color: #FF454D
+    font-size: 12px
+    font-family: 'Roboto', sans-serif
+    font-weight: 400
+    line-height: 130%
+    margin-top: -16px
+    margin-bottom: 16px
+
+  .popmechanic-invalid
+    color: #FF454D
+    border-radius: 4px
+    outline: 1.5px solid #FF454D
