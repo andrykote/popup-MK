@@ -1,12 +1,14 @@
 #popmechanic-form
+  height: 100vh
   .popup-box
     position: relative
     display: flex
     align-items: center
     flex-direction: column
     max-width: 550px
+    width: 100%
     padding: 48px 40px
-    outline: 3px solid #027A35
+    border: 3px solid #027A35
     border-radius: 4px
 
   .popup-close-box
@@ -145,18 +147,43 @@
 .br
   display: none
 
-//PHONE SCREEN 
+//  TABLET SCREEN SIZE
+.popmechanic-tablet  #popmechanic-form
+  .popup-box
+    max-width: 430px
+
+  .popup-logo-box
+    margin-bottom: 20px
+
+  .popup-heading
+    max-width: 300px
+    font-size: 22px
+    margin-bottom: 20px
+
+  .popup-form-label
+    font-size: 16px
+    margin-bottom: 8px
+
+  .popup-form-input
+    padding: 5px 16px 5px 16px
+    margin-bottom: 16px
+    font-size: 14px
+    line-height: 22px
+
+
+//PHONE SCREEN SIZE
 .popmechanic-mobile #popmechanic-form
   .popup-box
     max-width: 344px
+    width: 100%
     padding: 32px
+
+  .popup-logo-box
+    margin-bottom: 24px
 
   .popup-logo-box svg
     width: 194px
     height: 26px
-
-  .popup-logo-box
-    margin-bottom: 24px
 
   .popup-close-box
     right: 16px
@@ -179,8 +206,10 @@
     display: none
 
   .popup-form-input
-    padding: 11px 16px 11px 16px
+    padding: 5px 16px 5px 16px
     margin-bottom: 16px
+    font-size: 14px
+    line-height: 22px
 
   .popup-form-input[name="inn"]
     margin-bottom: 24px
